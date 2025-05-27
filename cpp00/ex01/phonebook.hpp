@@ -3,6 +3,7 @@
 
 # include <iostream>
 # include <limits>
+# include <iomanip>
 
 class Contact {
     private:
@@ -18,17 +19,31 @@ class Contact {
                  std::string last_name,
                  std::string nick_name,
                  int phone_number,
-                 std::string secret) {
-                    this->first_name = first_name;
-                    this->last_name = last_name;
-                    this->nick_name = nick_name;
-                    this->phone_number = phone_number;
-                    this->secret = secret;
-                 };
-
-        std::string getName(){
+                 std::string secret);
+        std::string getFirstName() {
             return (this->first_name);
         }
+        std::string getLastName() {
+            return (this->last_name);
+        }
+        std::string getNickName() {
+            return (this->nick_name);
+        }
 };
+
+class PhoneBook {
+    private:
+        Contact contact[8];
+    
+    public:
+        // Constructor Declaration
+        PhoneBook();
+        void addNewContact(int &contactCount);
+        void deleteFirstContact(int &contactCount);
+        void showTables(int &contactCount);
+        void showContacts(int i);
+
+};
+
 
 # endif
