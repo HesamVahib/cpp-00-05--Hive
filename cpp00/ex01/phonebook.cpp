@@ -12,7 +12,6 @@ int main() {
     while (1) {
         std::cout << "Enter a Command like ADD or SEARCH or EXIT" << std::endl;
 
-        // break by Ctrl+D signals for EOF
         if (!(std::cin >> command)) {
             break ;
         }

@@ -24,7 +24,6 @@ void PhoneBook::deleteFirstContact(int &contactCount) {
 }
 
 void PhoneBook::addNewContact(int &contactCount) {
-    std::cout << contactCount << std::endl;
     if (contactCount >= 8) {
         deleteFirstContact(contactCount);
     }
