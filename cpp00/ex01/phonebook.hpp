@@ -29,6 +29,12 @@ class Contact {
         std::string getNickName() {
             return (this->nick_name);
         }
+        int getPhoneNumber() {
+            return (this->phone_number);
+        }
+        std::string getSecret() {
+            return (this->secret);
+        }
 };
 
 class PhoneBook {
@@ -36,13 +42,11 @@ class PhoneBook {
         Contact contact[8];
     
     public:
-        // Constructor Declaration
         PhoneBook();
         void addNewContact(int &contactCount);
         void deleteFirstContact(int &contactCount);
         void showTables(int &contactCount);
-        void showContacts(int i);
-
+        void showContacts(int i, bool isSearch = false);
 };
 
 
