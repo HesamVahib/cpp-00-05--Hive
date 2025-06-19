@@ -1,13 +1,18 @@
+# Variables
 NAME = zombie
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror
-SRCS = main.cpp newZombie.cpp randomChump.cpp
+
+SRCS = main.cpp \
+	   Zombie.cpp \
+	   zombieHorde.cpp
 OBJS = $(SRCS:.cpp=.o)
 
+# Rules
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
