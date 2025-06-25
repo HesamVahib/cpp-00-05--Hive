@@ -1,10 +1,11 @@
-NAME    := ScavTrap
+NAME    := FlagTrap
 CXXFLAGS := -Wall -Wextra -Werror
 CXX     := c++
 
 SRCS    := main.cpp \
 		   ClapTrap.cpp \
 		   ScavTrap.cpp \
+		   FlagTrap.cpp
 
 OBJS    := $(SRCS:.cpp=.o)
 
